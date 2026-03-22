@@ -1,0 +1,13 @@
+[package]
+name = "game-server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+shared = { path = "../shared" }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+rdkafka = { workspace = true }
+axum = { version = "0.7", features = ["ws"] }
+futures = "0.3"

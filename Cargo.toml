@@ -1,0 +1,15 @@
+[workspace]
+members = [
+    "crates/shared",
+    "crates/game-server",
+    "crates/ranking-worker",
+    "crates/chat-worker",
+    "crates/replay-worker",
+]
+resolver = "2"
+
+[workspace.dependencies]
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rdkafka = { version = "0.36", features = ["cmake-build"] }
